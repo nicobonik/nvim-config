@@ -1,4 +1,5 @@
 require("nicobonik.remap")
+require("nicobonik.packer")
 
 vim.o.shiftwidth=4
-vim.wo.number=true
+vim.o.number=true
