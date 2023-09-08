@@ -1,1 +1,5 @@
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gc", function() 
+    vim.cmd("Git add .")
+    vim.cmd("Git commit -a")
+end)
