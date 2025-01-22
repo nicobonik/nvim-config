@@ -7,6 +7,5 @@ require("nicobonik.lazy_init")
 require("nicobonik.user_commands")
 vim.o.number=true
 vim.o.relativenumber=true
-vim.o.shiftwidth=2
-
+vim.o.shiftwidth=4
 

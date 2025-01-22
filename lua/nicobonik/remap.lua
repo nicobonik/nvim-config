@@ -14,6 +14,9 @@ vim.keymap.set("", "k", "kzz")
 vim.keymap.set("n", "<leader>h", ":noh<CR>", { desc = "remove highlighting" })
 
 
+vim.keymap.set("n", "<leader>to", "<C-w>s<C-w>j:term<CR>", { desc = "open terminal in new tab" })
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "exit terminal" })
+
 -- tab management
 vim.keymap.set("n", "<leader>tc", ":tabc<CR>", { desc = "close tab" })
 vim.keymap.set("n", "<leader>ta", ":tabo<CR>", { desc = "close other tabs" })
