@@ -44,3 +44,7 @@ vim.keymap.set("n", "<leader>sk", "<C-w>k", { desc = "Select above window" })
 vim.keymap.set("n", "<leader>sj", "<C-w>j", { desc = "Select window below" })
 vim.keymap.set("n", "<leader>sl", "<C-w>l", { desc = "Select window left" })
 vim.keymap.set("n", "<leader>sh", "<C-w>h", { desc = "Select window right"})
+
+-- new line shortcuts
+vim.keymap.set("n", "<leader>o", "o<Enter><Enter><Up>", { desc = "Insert newline with extra space" })
+vim.keymap.set("n", "<leader>O", "O<Enter><Enter><Up>", { desc = "Insert newline with extra space" })

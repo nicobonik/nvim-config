@@ -19,7 +19,11 @@ return {
     end
 
     nvim_tree.setup({
-      on_attach = on_attach
+      on_attach = on_attach,
+      git = {
+        enable = true,
+	ignore = false
+	    }
     })
   end
 }
