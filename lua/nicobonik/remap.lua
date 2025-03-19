@@ -15,7 +15,23 @@ vim.keymap.set("n", "<leader>h", ":noh<CR>", { desc = "remove highlighting" })
 
 
 vim.keymap.set("n", "<leader>to", "<C-w>s<C-w>j:term<CR>", { desc = "open terminal in new tab" })
-vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "exit terminal" })
+local function toggle_terminal_esc(enable)
+    if enable then
+        vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "exit terminal" })
+    else
+        vim.keymap.del("t", "<ESC>")
+    end
+end
+
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "lazygit",
+    callback = function() toggle_terminal_esc(false) end,
+})
+
+vim.api.nvim_create_autocmd("BufLeave", {
+    pattern = "lazygit",
+    callback = function() toggle_terminal_esc(true) end,
+})
 
 -- tab management
 vim.keymap.set("n", "<leader>tc", ":tabc<CR>", { desc = "close tab" })
